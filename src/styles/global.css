@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "Fira Code";
+    src:
+        url("/public/fonts/FiraCode-Light.woff2") format("woff2"),
+        url("/public/fonts/FiraCode-Light.woff") format("woff");
+    font-weight: light;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src:
+        url("/public/fonts/FiraCode-Bold.woff2") format("woff2"),
+        url("/public/fonts/FiraCode-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src:
+        url("/public/fonts/FiraCode-Regular.woff2") format("woff2"),
+        url("/public/fonts/FiraCode-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src:
+        url("/public/fonts/Inter24pt-Black.woff2") format("woff2"),
+        url("/public/fonts/Inter24pt-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src:
+        url("/public/fonts/Inter24pt-Light.woff2") format("woff2"),
+        url("/public/fonts/Inter24pt-Light.woff") format("woff");
+    font-weight: light;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src:
+        url("/public/fonts/Inter24pt-Bold.woff2") format("woff2"),
+        url("/public/fonts/Inter24pt-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src:
+        url("/public/fonts/Inter24pt-Regular.woff2") format("woff2"),
+        url("/public/fonts/Inter24pt-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* Primitive values */
+
+    /* Colors */
+    --white: #f2f2f2;
+    --intense-green: #c9d83f;
+    --dark-purple: #211f22;
+
+    /* Spacing | Padding | Radius */
+    --v-0px: 0px;
+    --v-4px: 4px;
+    --v-8px: 8px;
+    --v-16px: 16px;
+    --v-24px: 24px;
+    --v-32px: 32px;
+    --v-48px: 48px;
+    --v-64px: 64px;
+    --v-96px: 96px;
+    --v-128px: 128px;
+    --v-160px: 160px;
+    --v-200px: 200px;
+    --v-9999px: 9999px;
+
+    /* Font sizes and line heights for desktop */
+    /* Font sizes */
+    --fs-desktop-xsm-8px: 8px;
+    --fs-desktop-sm-12px: 12px;
+    --fs-desktop-p-16px: 16px;
+    --fs-desktop-h6-20px: 20px;
+    --fs-desktop-h5-24px: 24px;
+    --fs-desktop-h4-32px: 32px;
+    --fs-desktop-h3-40px: 40px;
+    --fs-desktop-h2-48px: 48px;
+    --fs-desktop-h1-60px: 60px;
+    /* Line heights */
+    --lh-desktop-xsm-12px: 12px;
+    --lh-desktop-sm-16px: 18px;
+    --lh-desktop-p-24px: 24px;
+    --lh-desktop-h6-28px: 28px;
+    --lh-desktop-h5-32px: 32px;
+    --lh-desktop-h4-38px: 38px;
+    --lh-desktop-h3-44px: 44px;
+    --lh-desktop-h2-52px: 52px;
+    --lh-desktop-h1-68px: 68px;
+
+    /* Font sizes and line heights for mobile */
+    /* Font sizes */
+    --fs-mobile-xsm-8px: 8px;
+    --fs-mobile-sm-12px: 12px;
+    --fs-mobile-p-16px: 16px;
+    --fs-mobile-h6-18px: 18px;
+    --fs-mobile-h5-20px: 20px;
+    --fs-mobile-h4-24px: 24px;
+    --fs-mobile-h3-26px: 26px;
+    --fs-mobile-h2-30px: 30px;
+    --fs-mobile-h1-32px: 32px;
+    /* Line heights */
+    --lh-mobile-xsm-12px: 12px;
+    --lh-mobile-sm-16px: 18px;
+    --lh-mobile-p-24px: 24px;
+    --lh-mobile-h6-28px: 28px;
+    --lh-mobile-h5-28px: 28px;
+    --lh-mobile-h4-32px: 32px;
+    --lh-mobile-h3-32px: 32px;
+    --lh-mobile-h2-36px: 36px;
+    --lh-mobile-h1-40px: 40px;
+
+    /* Semantic tokens */
+}
+
+.text-xsm {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fs-desktop-xsm-8px);
+    line-height: var(--lh-desktop-xsm-12px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-xsm-8px);
+        line-height: var(--lh-mobile-xsm-12px);
+    }
+}
+
+.sm {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fs-desktop-sm-12px);
+    line-height: var(--lh-desktop-sm-16px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-sm-12px);
+        line-height: var(--lh-mobile-sm-16px);
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-desktop-p-16px);
+    line-height: var(--lh-desktop-p-24px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-p-16px);
+        line-height: var(--lh-mobile-p-24px);
+    }
+}
+
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-desktop-h6-20px);
+    line-height: var(--lh-desktop-h6-28px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-h6-18px);
+        line-height: var(--lh-mobile-h6-28px);
+    }
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-desktop-h5-24px);
+    line-height: var(--lh-desktop-h5-32px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-h5-20px);
+        line-height: var(--lh-mobile-h5-28px);
+    }
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-desktop-h4-32px);
+    line-height: var(--lh-desktop-h4-38px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-h4-24px);
+        line-height: var(--lh-mobile-h4-32px);
+    }
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-desktop-h3-40px);
+    line-height: var(--lh-desktop-h3-44px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-h3-26px);
+        line-height: var(--lh-mobile-h3-32px);
+    }
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-desktop-h2-48px);
+    line-height: var(--lh-desktop-h2-52px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-h2-30px);
+        line-height: var(--lh-mobile-h2-36px);
+    }
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-desktop-h1-60px);
+    line-height: var(--lh-desktop-h1-68px);
+
+    @media (max-width: 767px) {
+        font-size: var(--fs-mobile-h1-32px);
+        line-height: var(--lh-mobile-h1-40px);
+    }
+}

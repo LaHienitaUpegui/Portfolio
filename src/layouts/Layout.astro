@@ -1,23 +1,50 @@
+---
+// imports
+import "../styles/global.css";
+
+// types
+
+// props
+
+// logic, variables, functions, etc.
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro Basics</title>
+    </head>
+
+    <body>
+        <header></header>
+
+        <main>
+            <slot />
+        </main>
+
+        <footer></footer>
+    </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+    html,
+    body {
+        margin: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    body {
+        background: var(--dark-purple)
+            url("../assets/images/fondo_grid_10opacity.webp") repeat center
+            center fixed;
+
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 </style>
