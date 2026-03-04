@@ -1,8 +1,8 @@
 @font-face {
     font-family: "Fira Code";
     src:
-        url("/public/fonts/FiraCode-Light.woff2") format("woff2"),
-        url("/public/fonts/FiraCode-Light.woff") format("woff");
+        url("/fonts/FiraCode-Light.woff2") format("woff2"),
+        url("/fonts/FiraCode-Light.woff") format("woff");
     font-weight: light;
     font-style: normal;
     font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
     font-family: "Fira Code";
     src:
-        url("/public/fonts/FiraCode-Bold.woff2") format("woff2"),
-        url("/public/fonts/FiraCode-Bold.woff") format("woff");
+        url("/fonts/FiraCode-Bold.woff2") format("woff2"),
+        url("/fonts/FiraCode-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -21,8 +21,8 @@
 @font-face {
     font-family: "Fira Code";
     src:
-        url("/public/fonts/FiraCode-Regular.woff2") format("woff2"),
-        url("/public/fonts/FiraCode-Regular.woff") format("woff");
+        url("/fonts/FiraCode-Regular.woff2") format("woff2"),
+        url("/fonts/FiraCode-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -31,8 +31,8 @@
 @font-face {
     font-family: "Inter";
     src:
-        url("/public/fonts/Inter24pt-Black.woff2") format("woff2"),
-        url("/public/fonts/Inter24pt-Black.woff") format("woff");
+        url("/fonts/Inter24pt-Black.woff2") format("woff2"),
+        url("/fonts/Inter24pt-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -41,8 +41,8 @@
 @font-face {
     font-family: "Inter";
     src:
-        url("/public/fonts/Inter24pt-Light.woff2") format("woff2"),
-        url("/public/fonts/Inter24pt-Light.woff") format("woff");
+        url("/fonts/Inter24pt-Light.woff2") format("woff2"),
+        url("/fonts/Inter24pt-Light.woff") format("woff");
     font-weight: light;
     font-style: normal;
     font-display: swap;
@@ -51,8 +51,8 @@
 @font-face {
     font-family: "Inter";
     src:
-        url("/public/fonts/Inter24pt-Bold.woff2") format("woff2"),
-        url("/public/fonts/Inter24pt-Bold.woff") format("woff");
+        url("/fonts/Inter24pt-Bold.woff2") format("woff2"),
+        url("/fonts/Inter24pt-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -61,8 +61,8 @@
 @font-face {
     font-family: "Inter";
     src:
-        url("/public/fonts/Inter24pt-Regular.woff2") format("woff2"),
-        url("/public/fonts/Inter24pt-Regular.woff") format("woff");
+        url("/fonts/Inter24pt-Regular.woff2") format("woff2"),
+        url("/fonts/Inter24pt-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
