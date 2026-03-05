@@ -31,25 +31,9 @@
     }
 }
 
-.about-me-container {
+.content-column {
     grid-area: information;
-
     height: 100%;
-
-    display: flex;
-    gap: var(--gap-48px);
-
-    & .divider {
-        width: 1px;
-        align-self: stretch;
-        background-color: var(--main-text-color);
-    }
-}
-.my-experience-container {
-    grid-area: information;
-
-    height: 100%;
-
     display: flex;
     gap: var(--gap-48px);
 

@@ -22,38 +22,11 @@ function MainContentComponent() {
         }
     }
 
-    function getContentContainerClass() {
-        switch (counter) {
-            case 1:
-                return "about-me-container";
-            case 2:
-                return "my-experience-container";
-            case 3:
-                return "projects-container";
-            case 4:
-                return "unknown-container";
-            default:
-                return "about-me-container";
-        }
-    }
-
     return (
         <section className="main-content">
-            {/* {!initialButtonClicked && (
-                <div className="button-and-text">
-                    <p>My portfolio is a counter, click it!</p>
-
-                    <button
-                        className="counter-button"
-                        onClick={() => setInitialButtonClicked(true)}
-                    >
-                        Don't be shy, I don't bite!
-                    </button>
-                </div>
-            )} */}
-
-            <div className={getContentContainerClass()}>
+            <div className="content-column">
                 {renderContent()}
+
                 <div className="divider"></div>
             </div>
 
