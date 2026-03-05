@@ -2,7 +2,7 @@ import "../styles/aboutme.css";
 
 function AboutMe() {
     return (
-        <>
+        <div className="about-me-container">
             <div className="img-mock"></div>
 
             <div className="text-information">
@@ -21,7 +21,7 @@ function AboutMe() {
 
                 <p className="location">Based in Colombia</p>
             </div>
-        </>
+        </div>
     );
 }
 

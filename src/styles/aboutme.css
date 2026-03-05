@@ -1,6 +1,13 @@
+.about-me-container {
+    width: 100%;
+    display: flex;
+    gap: var(--gap-48px);
+}
+
 .img-mock {
-    width: 1000px;
+    width: 400px;
     height: auto;
+    flex-shrink: 0;
 
     background-color: var(--intense-green);
     border-radius: var(--radius-24px);
