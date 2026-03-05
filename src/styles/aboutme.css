@@ -1,0 +1,28 @@
+.img-mock {
+    width: 1000px;
+    height: auto;
+
+    background-color: var(--intense-green);
+    border-radius: var(--radius-24px);
+}
+.text-information {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-32px);
+
+    & .greeting {
+        font-family: "Fira Code";
+        font-weight: bold;
+        color: var(--main-text-color);
+    }
+
+    & .main-title {
+        font-weight: bold;
+        color: var(--green-text-color);
+    }
+
+    & .description,
+    .location {
+        color: var(--main-text-color);
+    }
+}

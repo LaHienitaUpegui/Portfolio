@@ -1,6 +1,7 @@
 ---
 // imports
 import Layout from "../layouts/Layout.astro";
+import MainContentComponent from "../components/MainContentComponent";
 
 // types
 
@@ -10,36 +11,5 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
-        labore rem dignissimos asperiores non inventore blanditiis possimus
-        expedita saepe, culpa nesciunt suscipit quo. Sunt quaerat ea totam ipsa
-        autem voluptatum doloribus molestias corporis? Dolores sequi officiis
-        ducimus aut neque? Distinctio eius, delectus, vel sapiente explicabo
-        eaque, corrupti et dolor impedit excepturi asperiores saepe nulla harum
-        alias. Fuga, iure aliquam quibusdam minima perferendis doloribus nostrum
-        debitis ipsum. Voluptatum modi qui necessitatibus fugit ab! Quae at
-        officiis suscipit placeat cum mollitia, illo nihil! Unde voluptatibus
-        numquam at, debitis dolore repellat similique explicabo aliquam
-        repudiandae? At saepe aut nihil! Vero maxime aliquid eveniet molestiae
-        eius ad, iste delectus corporis nulla reiciendis ipsa ipsum ex
-        exercitationem voluptatum et quisquam, adipisci possimus ea odio,
-        accusamus rem dolor quos nam dolore? Sequi modi delectus mollitia
-        nostrum. Quis aliquam laudantium voluptatem. Dolorum sapiente voluptates
-        necessitatibus in pariatur, distinctio vel vitae officia? Recusandae
-        eveniet nobis ipsa reiciendis facere cum molestiae minus debitis error
-        sint commodi laborum saepe culpa amet quia, facilis repudiandae fugiat
-        sed rem non placeat. Recusandae accusamus molestiae laborum, doloremque
-        odit id deleniti repudiandae quis temporibus facilis obcaecati
-        aspernatur, distinctio similique asperiores, magnam et iste qui labore
-        possimus? Repudiandae voluptatum odit ad quasi, magni accusantium rerum!
-    </p>
-
-    <h1>Hola, mi nombre es Juan Diego</h1>
+    <MainContentComponent client:load />
 </Layout>
-
-<style>
-    p {
-        color: white;
-    }
-</style>

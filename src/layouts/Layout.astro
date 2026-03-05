@@ -150,6 +150,7 @@ import "../styles/global.css";
 
     main {
         flex: 1;
+        width: 100%;
         max-width: 1500px;
         margin: 0 auto;
         padding: var(--padding-0px) var(--padding-64px);
@@ -180,6 +181,26 @@ import "../styles/global.css";
     }
 
     ::-webkit-scrollbar {
-        display: none;
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--intense-green);
+        border-radius: var(--radius-4px);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--intense-green);
+        opacity: 0.8;
+    }
+
+    /* Scrollbar para Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--intense-green) transparent;
     }
 </style>
