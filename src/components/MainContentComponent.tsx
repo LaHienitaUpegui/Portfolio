@@ -1,12 +1,12 @@
 import "../styles/maincontentcomponent.css";
 import AboutMe from "./AboutMe";
-import Projects from "./Projects";
 import MyExperience from "./MyExperience";
+import Projects from "./Projects";
+import MoreComingSoon from "./MoreComingSoon";
 import { useState } from "react";
 
 function MainContentComponent() {
-    const [counter, setCounter] = useState(0);
-    const [initialButtonClicked, setInitialButtonClicked] = useState(false);
+    const [counter, setCounter] = useState(1);
 
     function renderContent() {
         switch (counter) {
@@ -17,7 +17,7 @@ function MainContentComponent() {
             case 3:
                 return <Projects />;
             case 4:
-                return <div>???</div>;
+                return <MoreComingSoon />;
             default:
                 return <AboutMe />;
         }
