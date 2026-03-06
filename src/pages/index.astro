@@ -10,9 +10,43 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <h1>Welcome to my portfolio!</h1>
-    <p>
-        This is a simple portfolio website built with Astro. Click the button
-        below to see my work experience and projects.
-    </p>
+    <div class="text-and-initial-button">
+        <p>My portfolio is a counter, try and click it!</p>
+
+        <a href="/portfolio-content">
+            <button transition:name="counter-button"
+                >Click me! Don't be shy! I don't bite!</button
+            >
+        </a>
+    </div>
 </Layout>
+
+<style>
+    .text-and-initial-button {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--gap-24px);
+    }
+
+    .text-and-initial-button p {
+        color: var(--main-text-color);
+    }
+
+    .text-and-initial-button button {
+        padding: var(--padding-8px) var(--padding-16px);
+        border: 1px solid var(--button-green-border);
+        border-radius: var(--radius-8px);
+        background-color: var(--button-dark-purple-background);
+        color: var(--main-text-color);
+        cursor: pointer;
+
+        font-family: "Inter", sans-serif;
+        font-size: var(--fs-desktop-p-16px);
+        font-weight: bold;
+
+        height: 56px;
+    }
+</style>

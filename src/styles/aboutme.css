@@ -11,6 +11,8 @@
 
     background-color: var(--intense-green);
     border-radius: var(--radius-24px);
+
+    animation: fadeInFromLeft 1s ease-out;
 }
 .text-information {
     display: flex;

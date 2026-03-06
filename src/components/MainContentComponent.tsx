@@ -34,7 +34,12 @@ function MainContentComponent() {
             <div className="index-column">
                 <div className="index">
                     <div className="counter-and-button">
-                        <p className="current-number">Current: {counter}</p>
+                        <p
+                            className="current-number"
+                            style={{ viewTransitionName: "counter-button" }}
+                        >
+                            Current: {counter}
+                        </p>
 
                         <button
                             className="counter-button"
