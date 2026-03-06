@@ -11,15 +11,78 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
     <div class="text-and-initial-button">
-        <p>My portfolio is a counter, try and click it!</p>
+        <p class="initial-phrase">
+            My portfolio is a counter, try and click it!
+        </p>
 
-        <a href="/portfolio-content">
-            <button transition:name="counter-button"
+        <a href="/portfolio-content" class="button-container">
+            <svg class="border-svg">
+                <rect
+                    class="border-rect"
+                    rx="8"
+                    ry="8"
+                    x="0"
+                    y="0"
+                    width="100%"
+                    height="100%"></rect>
+            </svg>
+
+            <button transition:name="counter-button" class="visual-button"
                 >Click me! Don't be shy! I don't bite!</button
             >
         </a>
     </div>
 </Layout>
+
+<script>
+    import gsap from "gsap";
+    import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+    gsap.registerPlugin(DrawSVGPlugin);
+
+    const button = document.querySelector(".button-container");
+    const rect = document.querySelector(
+        ".border-rect",
+    ) as SVGGeometryElement | null;
+    const rectLength = rect?.getTotalLength() || 0;
+
+    gsap.set(rect, {
+        strokeDasharray: `80 ${rectLength - 80}`,
+        strokeDashoffset: 0,
+    });
+
+    gsap.to(rect, {
+        strokeDashoffset: rectLength ? -rectLength : 0,
+        duration: 3,
+        repeat: -1,
+        ease: "none",
+    });
+
+    gsap.to(".border-rect", {
+        opacity: 0.4,
+        duration: 0.2,
+        repeat: -1,
+        yoyo: true,
+        repeatRefresh: true,
+        ease: "power1.inOut",
+        delay: Math.random() * 2,
+    });
+
+    button?.addEventListener("mouseenter", () => {
+        gsap.to(".button-container", {
+            scale: 1.1,
+            duration: 0.3,
+            ease: "power2.out",
+        });
+    });
+
+    button?.addEventListener("mouseleave", () => {
+        gsap.to(".button-container", {
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out",
+        });
+    });
+</script>
 
 <style>
     .text-and-initial-button {
@@ -35,7 +98,38 @@ import Layout from "../layouts/Layout.astro";
         color: var(--main-text-color);
     }
 
-    .text-and-initial-button button {
+    .text-and-initial-button .button-container {
+        position: relative;
+        display: inline-block;
+        padding: 2px;
+        text-decoration: none;
+    }
+
+    .border-svg {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        overflow: visible !important;
+        pointer-events: none;
+        fill: none;
+    }
+
+    .border-rect {
+        x: 5;
+        y: 5;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+
+        fill: none;
+        stroke: var(--button-green-border);
+        stroke-width: 2;
+        stroke-linecap: round;
+        filter: drop-shadow(0 0 5px #c9d83f);
+    }
+
+    .text-and-initial-button .visual-button {
         padding: var(--padding-8px) var(--padding-16px);
         border: 1px solid var(--button-green-border);
         border-radius: var(--radius-8px);
