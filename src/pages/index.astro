@@ -40,39 +40,55 @@ import Layout from "../layouts/Layout.astro";
     gsap.registerPlugin(DrawSVGPlugin);
 
     const button = document.querySelector(".button-container");
+    const initialPhrase = document.querySelector(".initial-phrase");
     const rect = document.querySelector(
         ".border-rect",
     ) as SVGGeometryElement | null;
-    const rectLength = rect?.getTotalLength() || 0;
-
-    gsap.set(rect, {
-        strokeDasharray: `80 ${rectLength - 80}`,
-        strokeDashoffset: 0,
-    });
-
-    gsap.to(rect, {
-        strokeDashoffset: rectLength ? -rectLength : 0,
-        duration: 3,
-        repeat: -1,
-        ease: "none",
-    });
-
-    gsap.to(".border-rect", {
-        opacity: 0.4,
-        duration: 0.2,
+    let initialAnimationTl = gsap.timeline();
+    const borderPulseAnimation = gsap.to(rect, {
+        opacity: 0,
+        duration: 0.8,
         repeat: -1,
         yoyo: true,
-        repeatRefresh: true,
-        ease: "power1.inOut",
-        delay: Math.random() * 2,
+        ease: "steps(1)",
+        paused: true,
     });
 
+    // Entry animation
+    initialAnimationTl
+        .from(button, {
+            scale: 0.8,
+            opacity: 0,
+            duration: 1,
+            ease: "back.out(1.7)",
+        })
+        .from(
+            initialPhrase,
+            {
+                opacity: 0,
+                y: 20,
+                duration: 0.5,
+                ease: "power2.out",
+            },
+            "-=0.3",
+        );
+
+    // Pulse animation for button border
+    gsap.set(rect, {
+        drawSVG: "0% 100%",
+        opacity: 1,
+    });
+    borderPulseAnimation.play();
+
+    // Hover and unhover animations for button
     button?.addEventListener("mouseenter", () => {
         gsap.to(".button-container", {
-            scale: 1.1,
+            scale: 1.05,
             duration: 0.3,
             ease: "power2.out",
         });
+
+        borderPulseAnimation.pause();
     });
 
     button?.addEventListener("mouseleave", () => {
@@ -81,6 +97,8 @@ import Layout from "../layouts/Layout.astro";
             duration: 0.3,
             ease: "power2.out",
         });
+
+        borderPulseAnimation.play();
     });
 </script>
 
@@ -124,9 +142,10 @@ import Layout from "../layouts/Layout.astro";
 
         fill: none;
         stroke: var(--button-green-border);
-        stroke-width: 2;
+        stroke-width: 3;
         stroke-linecap: round;
-        filter: drop-shadow(0 0 5px #c9d83f);
+
+        filter: drop-shadow(0 0 8px var(--button-green-border));
     }
 
     .text-and-initial-button .visual-button {
