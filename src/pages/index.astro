@@ -30,6 +30,57 @@ import Layout from "../layouts/Layout.astro";
             <button transition:name="counter-button" class="visual-button"
                 >Click me! Don't be shy! I don't bite!</button
             >
+
+            <div class="clickme-container clickme-bottom">
+                <svg
+                    id="Capa_2"
+                    data-name="Capa 2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 21.59 42.68"
+                    class="arrow-svg arrow-bottom"
+                >
+                    <g id="Elements">
+                        <path
+                            d="M21,20.86q-3.6-1.28-7.42-9.59c-.46,3.55-.83,6.06-1.09,8.58-.28,2.71-.54,5.42-.67,8.14-.18,3.68-.19,7.37-.38,11.05-.08,1.46.56,3.69-1.88,3.65-2.16-.04-2.16-2.19-2.13-3.69.09-5.44.29-10.87.64-16.3.2-3.02.77-6.01,1.25-9.54-3.82,3.08-4.65,8.13-9.32,10.67.09-1.6-.12-2.72.25-3.61C2.93,13.66,6.32,7.5,10.95,2.09c.41-.48.85-.98,1.37-1.34,1.93-1.34,3.98-.89,4.62,1.32,1.69,5.83,3.13,11.73,4.64,17.61.06.23-.26.55-.58,1.18Z"
+                        ></path>
+                    </g>
+                </svg>
+                <p class="clickme-text">Yes, click me!</p>
+            </div>
+
+            <div class="clickme-container clickme-left">
+                <svg
+                    id="Capa_2"
+                    data-name="Capa 2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 21.59 42.68"
+                    class="arrow-svg arrow-left"
+                >
+                    <g id="Elements">
+                        <path
+                            d="M21,20.86q-3.6-1.28-7.42-9.59c-.46,3.55-.83,6.06-1.09,8.58-.28,2.71-.54,5.42-.67,8.14-.18,3.68-.19,7.37-.38,11.05-.08,1.46.56,3.69-1.88,3.65-2.16-.04-2.16-2.19-2.13-3.69.09-5.44.29-10.87.64-16.3.2-3.02.77-6.01,1.25-9.54-3.82,3.08-4.65,8.13-9.32,10.67.09-1.6-.12-2.72.25-3.61C2.93,13.66,6.32,7.5,10.95,2.09c.41-.48.85-.98,1.37-1.34,1.93-1.34,3.98-.89,4.62,1.32,1.69,5.83,3.13,11.73,4.64,17.61.06.23-.26.55-.58,1.18Z"
+                        ></path>
+                    </g>
+                </svg>
+                <p class="clickme-text">Yes, click me!</p>
+            </div>
+
+            <div class="clickme-container clickme-right">
+                <svg
+                    id="Capa_2"
+                    data-name="Capa 2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 21.59 42.68"
+                    class="arrow-svg arrow-right"
+                >
+                    <g id="Elements">
+                        <path
+                            d="M21,20.86q-3.6-1.28-7.42-9.59c-.46,3.55-.83,6.06-1.09,8.58-.28,2.71-.54,5.42-.67,8.14-.18,3.68-.19,7.37-.38,11.05-.08,1.46.56,3.69-1.88,3.65-2.16-.04-2.16-2.19-2.13-3.69.09-5.44.29-10.87.64-16.3.2-3.02.77-6.01,1.25-9.54-3.82,3.08-4.65,8.13-9.32,10.67.09-1.6-.12-2.72.25-3.61C2.93,13.66,6.32,7.5,10.95,2.09c.41-.48.85-.98,1.37-1.34,1.93-1.34,3.98-.89,4.62,1.32,1.69,5.83,3.13,11.73,4.64,17.61.06.23-.26.55-.58,1.18Z"
+                        ></path>
+                    </g>
+                </svg>
+                <p class="clickme-text">Yes, click me!</p>
+            </div>
         </a>
     </div>
 </Layout>
@@ -41,10 +92,19 @@ import Layout from "../layouts/Layout.astro";
 
     const button = document.querySelector(".button-container");
     const initialPhrase = document.querySelector(".initial-phrase");
+
+    const clickMeContainers = document.querySelectorAll(".clickme-container");
+    clickMeContainers.forEach((container) => {
+        gsap.set(container, {
+            opacity: 0,
+            pointerEvents: "none",
+        });
+    });
+
     const rect = document.querySelector(
         ".border-rect",
     ) as SVGGeometryElement | null;
-    let initialAnimationTl = gsap.timeline();
+    const initialAnimationTl = gsap.timeline();
     const borderPulseAnimation = gsap.to(rect, {
         opacity: 0,
         duration: 0.8,
@@ -89,6 +149,48 @@ import Layout from "../layouts/Layout.astro";
         });
 
         borderPulseAnimation.pause();
+
+        clickMeContainers.forEach((container) => {
+            gsap.to(container, {
+                opacity: 1,
+            });
+
+            gsap.fromTo(
+                container.querySelector(".arrow-bottom"),
+                { y: -15 },
+                {
+                    y: 2,
+                    duration: 0.5,
+                    ease: "power1.inOut",
+                    repeat: -1,
+                    yoyo: true,
+                },
+            );
+
+            gsap.fromTo(
+                container.querySelector(".arrow-left"),
+                { x: -2 },
+                {
+                    x: 15,
+                    duration: 0.5,
+                    ease: "power1.inOut",
+                    repeat: -1,
+                    yoyo: true,
+                },
+            );
+
+            gsap.fromTo(
+                container.querySelector(".arrow-right"),
+                { x: 2 },
+                {
+                    x: -15,
+                    duration: 0.5,
+                    ease: "power1.inOut",
+                    repeat: -1,
+                    yoyo: true,
+                },
+            );
+        });
     });
 
     button?.addEventListener("mouseleave", () => {
@@ -99,6 +201,12 @@ import Layout from "../layouts/Layout.astro";
         });
 
         borderPulseAnimation.play();
+
+        clickMeContainers.forEach((container) => {
+            gsap.to(container, {
+                opacity: 0,
+            });
+        });
     });
 </script>
 
@@ -112,7 +220,7 @@ import Layout from "../layouts/Layout.astro";
         gap: var(--gap-24px);
     }
 
-    .text-and-initial-button p {
+    .text-and-initial-button .initial-phrase {
         color: var(--main-text-color);
     }
 
@@ -161,5 +269,60 @@ import Layout from "../layouts/Layout.astro";
         font-weight: bold;
 
         height: 56px;
+    }
+
+    .clickme-bottom {
+        position: absolute;
+        top: 220%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap-8px);
+    }
+
+    .clickme-left {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: -30%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        gap: var(--gap-8px);
+
+        & .arrow-left {
+            transform: rotate(90deg);
+            order: 2;
+        }
+    }
+
+    .clickme-right {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 160%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        gap: var(--gap-8px);
+
+        & .arrow-right {
+            transform: rotate(-90deg);
+        }
+    }
+
+    .clickme-text {
+        font-family: "Neue Comic", sans-serif;
+        font-size: var(--fs-desktop-h5-24px);
+        font-weight: bold;
+        color: var(--main-text-color);
+    }
+
+    .arrow-svg {
+        fill: var(--white);
+        width: 50px;
+        height: 50px;
     }
 </style>
