@@ -9,17 +9,19 @@
 
     transition:
         border-color 0.3s ease,
-        opacity 0.3s ease;
-    background-color: 0.3s ease;
+        opacity 0.3s ease,
+        background-color 0.3s ease,
+        filter 0.3s ease;
 }
 
 .experience-card-container:hover {
-    border-color: var(--experience-card-border);
-    background-color: var(--experience-card-background);
+    border-color: var(--card-hover-border);
+    background-color: var(--card-hover-background);
 }
 
 .experience-container:hover .experience-card-container:not(:hover) {
     opacity: 0.5;
+    filter: grayscale();
 }
 
 .title-and-charge {
