@@ -12,6 +12,13 @@ gsap.registerPlugin(useGSAP);
 function MainContentComponent() {
     const [counter, setCounter] = useState(1);
 
+    const contentComponentsContainers: string[] = [
+        "about-me-container",
+        "experience-container",
+        "projects-container",
+        "more-coming-soon-container",
+    ];
+
     function renderContent() {
         switch (counter) {
             case 1:
@@ -29,23 +36,13 @@ function MainContentComponent() {
 
     useGSAP(
         () => {
-            gsap.from(".about-me-container", {
-                opacity: 0,
-                x: -100,
-                duration: 1,
-                ease: "power2.out",
-            });
-            gsap.from(".experience-container", {
-                opacity: 0,
-                x: -100,
-                duration: 1,
-                ease: "power2.out",
-            });
-            gsap.from(".projects-container", {
-                opacity: 0,
-                x: -100,
-                duration: 1,
-                ease: "power2.out",
+            contentComponentsContainers.forEach((container) => {
+                gsap.from(`.${container}`, {
+                    opacity: 0,
+                    x: -100,
+                    duration: 1,
+                    ease: "power2.out",
+                });
             });
 
             gsap.to(".active", {
