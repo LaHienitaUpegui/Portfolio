@@ -35,6 +35,18 @@ function MainContentComponent() {
                 duration: 1,
                 ease: "power2.out",
             });
+            gsap.from(".experience-container", {
+                opacity: 0,
+                x: -100,
+                duration: 1,
+                ease: "power2.out",
+            });
+            gsap.from(".projects-container", {
+                opacity: 0,
+                x: -100,
+                duration: 1,
+                ease: "power2.out",
+            });
 
             gsap.to(".active", {
                 color: "var(--intense-green)",
