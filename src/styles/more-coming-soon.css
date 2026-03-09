@@ -1,19 +1,19 @@
 .more-coming-soon-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--gap-24px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-24px);
 }
 
 .more-coming-soon-container h6 {
-  font-family: "Fira Code", monospace;
-  font-weight: bold;
-  color: var(--main-text-color);
+    font-family: "Fira Code", monospace;
+    font-weight: bold;
+    color: var(--main-text-color);
 }
 
 .more-coming-soon-container h2 {
-  font-weight: bold;
-  color: var(--green-text-color);
+    font-weight: bold;
+    color: var(--green-text-color);
 }

@@ -1,54 +1,54 @@
 .project-card {
-  display: flex;
-  gap: var(--gap-32px);
-  padding: var(--padding-32px);
-  border: 1px solid var(--experience-card-border);
-  border-radius: var(--radius-16px);
+    display: flex;
+    gap: var(--gap-32px);
+    padding: var(--padding-32px);
+    border: 1px solid var(--experience-card-border);
+    border-radius: var(--radius-16px);
 }
 
 .image-mockup {
-  width: 240px;
-  height: 240px;
-  flex-shrink: 0;
-  background-color: var(--techused-background);
-  border-radius: var(--radius-16px);
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+    background-color: var(--techused-background);
+    border-radius: var(--radius-16px);
 }
 
 .project-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .title-and-info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-8px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8px);
 }
 
 .project-title {
-  font-family: "Fira Code", monospace;
-  font-weight: bold;
-  color: var(--main-text-color);
+    font-family: "Fira Code", monospace;
+    font-weight: bold;
+    color: var(--main-text-color);
 }
 
 .project-description {
-  color: var(--main-text-color);
+    color: var(--main-text-color);
 }
 
 .techs-used {
-  display: flex;
-  gap: var(--gap-16px);
+    display: flex;
+    gap: var(--gap-16px);
 }
 
 .tech {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  padding: var(--padding-4px) var(--padding-16px);
-  background-color: var(--techused-background);
-  font-weight: bold;
-  border: none;
-  border-radius: var(--radius-9999px);
+    padding: var(--padding-4px) var(--padding-16px);
+    background-color: var(--techused-background);
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radius-9999px);
 }

@@ -11,26 +11,24 @@
 
     background-color: var(--intense-green);
     border-radius: var(--radius-24px);
-
-    animation: fadeInFromLeft 1s ease-out;
 }
 .text-information {
     display: flex;
     flex-direction: column;
     gap: var(--gap-32px);
 
-    & .greeting {
+    .greeting {
         font-family: "Fira Code";
         font-weight: bold;
         color: var(--main-text-color);
     }
 
-    & .main-title {
+    .main-title {
         font-weight: bold;
         color: var(--green-text-color);
     }
 
-    & .description,
+    .description,
     .location {
         color: var(--main-text-color);
     }
