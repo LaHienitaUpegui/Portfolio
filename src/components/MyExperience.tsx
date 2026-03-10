@@ -9,35 +9,59 @@ function MyExperience() {
     return (
         <div className="experience-container">
             <ExperienceCard
-                title="Card title 1"
-                charge="Charge 1"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsam voluptatibus aspernatur itaque ea voluptas aperiam ex totam sunt suscipit aut veniam excepturi aliquam corporis rerum nobis dolor, autem voluptatum consectetur delectus, amet fugit accusantium aliquid enim! Harum ducimus velit ipsa repellendus modi suscipit aspernatur perferendis tenetur minima cumque voluptate beatae numquam recusandae repudiandae magnam iusto, maiores repellat iure ut odio dolor animi?"
+                title="One Cluster"
+                charge="Frontend Developer and Graphic Designer"
+                timePeriod="2024 - Present"
+                description="Led the end-to-end development of frontend solutions, from initial architectural decisions and technology stack selection to final delivery. I spearheaded the creation of comprehensive design systems to ensure visual consistency and managed full projects lifecycles, including requirement gathering and client stakeholder management."
                 techsUsed={orderTechsByLength([
                     "Adobe Illustrator",
                     "Astro",
                     "React",
+                    "JavaScript",
                     "TypeScript",
                     "CSS",
                     "HTML",
                     "Git",
                     "GitHub",
+                    "Figma",
+                    "GSAP",
                 ])}
                 customClassName="experience-card-1"
             />
 
             <ExperienceCard
-                title="Card title 2"
-                charge="Charge 2"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsam voluptatibus aspernatur itaque ea voluptas aperiam ex totam sunt suscipit aut veniam excepturi aliquam corporis rerum nobis dolor, autem voluptatum consectetur delectus, amet fugit accusantium aliquid enim! Harum ducimus velit ipsa repellendus modi suscipit aspernatur perferendis tenetur minima cumque voluptate beatae numquam recusandae repudiandae magnam iusto, maiores repellat iure ut odio dolor animi?"
-                techsUsed={orderTechsByLength(["Tech 1", "Tech 2", "Tech 3"])}
+                title="Freelance"
+                charge="Graphic Designer"
+                timePeriod="2022 - 2024"
+                description="Worked for some companies analyzing and creating visual and communication strategies, physical and digital graphic pieces of communication, and branding."
+                techsUsed={orderTechsByLength([
+                    "Adobe Illustrator",
+                    "Photoshop",
+                    "Premiere",
+                    "After Effects",
+                    "Photography",
+                    "Ligthroom",
+                ])}
                 customClassName="experience-card-2"
             />
 
             <ExperienceCard
-                title="Card title 3"
-                charge="Charge 3"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsam voluptatibus aspernatur itaque ea voluptas aperiam ex totam sunt suscipit aut veniam excepturi aliquam corporis rerum nobis dolor, autem voluptatum consectetur delectus, amet fugit accusantium aliquid enim! Harum ducimus velit ipsa repellendus modi suscipit aspernatur perferendis tenetur minima cumque voluptate beatae numquam recusandae repudiandae magnam iusto, maiores repellat iure ut odio dolor animi?"
-                techsUsed={orderTechsByLength(["Tech 1", "Tech 2", "Tech 3"])}
+                title="EAFIT University"
+                charge="Graphic Designer and Frontend Developer Jr."
+                timePeriod="2019 - 2022"
+                description="I worked in the Graduate and Philanthropy centers alongside the communications team to create communication strategies and visual elements with the aim of raising funds for scholarships and improving ties between graduates and the university. I was also part of the team responsible for maintaining and updating the websites for both centers, where I was in charge of visual design and coding."
+                techsUsed={orderTechsByLength([
+                    "Adobe Illustrator",
+                    "Photoshop",
+                    "Premiere",
+                    "After Effects",
+                    "Eloqua",
+                    "WordPress",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Photography",
+                ])}
                 customClassName="experience-card-3"
             />
         </div>

@@ -36,9 +36,20 @@
     color: var(--main-text-color);
 }
 
-.charge {
-    color: var(--main-text-color);
-    opacity: 0.8;
+.charge-and-time-period {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .charge {
+        color: var(--main-text-color);
+        opacity: 0.8;
+    }
+
+    .time-period {
+        color: var(--green-text-color);
+        opacity: 1;
+    }
 }
 
 .description {
@@ -48,6 +59,7 @@
 .techs-used {
     display: flex;
     gap: var(--gap-16px);
+    flex-wrap: wrap;
 }
 
 .tech {
