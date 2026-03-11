@@ -22,8 +22,9 @@ function Projects() {
 
                 <div className="project-cards-container">
                     <ProjectCard
+                        backgroundImg="/imgs/naliia_webapp.webp"
                         title="Naliia web application"
-                        description="A web app that users can use to interact via RPC directly with the Naliia Tryton ERP system, allowing them to perform different tasks such as checking and creating new services in the database and creating reports of services successfully taken in a certain period of time."
+                        description="A web app that users can use to interact via RPC directly with the Naliia Tryton ERP system, allowing them to perform different tasks such as checking and creating new services in the database and creat ing reports of services successfully taken in a certain period of time."
                         projectLink="/naliia-project"
                         techsUsed={orderTechsByLength([
                             "VITE",
@@ -35,6 +36,7 @@ function Projects() {
                     />
 
                     <ProjectCard
+                        backgroundImg="/imgs/naliia_website.webp"
                         title="Naliia website"
                         description="A content-focused website using Astro and some scroll-triggered animations with the purpose of providing information about Naliia and its services to people."
                         projectLink="#"

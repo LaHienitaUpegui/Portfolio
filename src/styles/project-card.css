@@ -31,6 +31,9 @@
     flex-shrink: 0;
     background-color: var(--techused-background);
     border-radius: var(--radius-16px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .project-info {

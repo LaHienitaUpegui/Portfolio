@@ -1,9 +1,13 @@
 import "../styles/aboutme.css";
+import TestComponent from "./TestComponent";
+import "../styles/test-component.css";
 
 function AboutMe() {
     return (
         <div className="about-me-container">
-            <div className="img-mock"></div>
+            <div className="img-container">
+                <TestComponent />
+            </div>
 
             <div className="text-information">
                 <p className="greeting">Hi, my name is Juan Diego!</p>

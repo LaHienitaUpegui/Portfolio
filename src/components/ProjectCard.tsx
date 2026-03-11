@@ -5,6 +5,7 @@ interface ProjectCardProps {
     description: string;
     techsUsed: string[];
     projectLink?: string;
+    backgroundImg?: string;
 }
 
 function ProjectCard({
@@ -12,10 +13,18 @@ function ProjectCard({
     description,
     techsUsed,
     projectLink,
+    backgroundImg = "",
 }: ProjectCardProps) {
     return (
         <div className="project-card">
-            <div className="image-mockup"></div>
+            <div
+                className="image-mockup"
+                {...(backgroundImg && {
+                    style: {
+                        backgroundImage: `url(${backgroundImg})`,
+                    },
+                })}
+            ></div>
 
             <div className="project-info">
                 <div className="title-and-info">
