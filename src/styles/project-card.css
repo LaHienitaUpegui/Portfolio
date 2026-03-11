@@ -20,7 +20,7 @@
     border-color: var(--card-hover-border);
 }
 
-.projects-container:hover .project-card:not(:hover) {
+.project-cards-container:hover .project-card:not(:hover) {
     filter: grayscale();
     opacity: 0.5;
 }
@@ -43,31 +43,51 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap-8px);
+
+    .project-title {
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        color: var(--main-text-color);
+    }
+
+    .project-description {
+        color: var(--main-text-color);
+    }
 }
 
-.project-title {
-    font-family: "Fira Code", monospace;
+.view-project-link {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-8px);
+    color: var(--main-text-color);
+    font-family: "Inter", sans-serif;
     font-weight: bold;
-    color: var(--main-text-color);
-}
+    font-size: var(--fs-desktop-p-16px);
+    line-height: var(--lh-desktop-p-24px);
 
-.project-description {
-    color: var(--main-text-color);
+    &:hover {
+        color: var(--main-text-color-hover);
+
+        svg,
+        path {
+            stroke: var(--main-text-color-hover);
+        }
+    }
 }
 
 .techs-used {
     display: flex;
     gap: var(--gap-16px);
-}
 
-.tech {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .tech {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    padding: var(--padding-4px) var(--padding-16px);
-    background-color: var(--techused-background);
-    font-weight: bold;
-    border: none;
-    border-radius: var(--radius-9999px);
+        padding: var(--padding-4px) var(--padding-16px);
+        background-color: var(--techused-background);
+        font-weight: bold;
+        border: none;
+        border-radius: var(--radius-9999px);
+    }
 }

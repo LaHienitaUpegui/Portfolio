@@ -17,14 +17,18 @@ function MyExperience() {
                     "Adobe Illustrator",
                     "Astro",
                     "React",
-                    "JavaScript",
+                    "JavaScript ES6+",
                     "TypeScript",
-                    "CSS",
-                    "HTML",
+                    "CSS3",
+                    "HTML5",
                     "Git",
                     "GitHub",
                     "Figma",
                     "GSAP",
+                    "VITE",
+                    "Docker",
+                    "Docker Compose",
+                    "Docusaurus",
                 ])}
                 customClassName="experience-card-1"
             />
@@ -40,7 +44,7 @@ function MyExperience() {
                     "Premiere",
                     "After Effects",
                     "Photography",
-                    "Ligthroom",
+                    "Lightroom",
                 ])}
                 customClassName="experience-card-2"
             />
@@ -56,10 +60,8 @@ function MyExperience() {
                     "Premiere",
                     "After Effects",
                     "Eloqua",
-                    "WordPress",
-                    "HTML",
-                    "CSS",
-                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
                     "Photography",
                 ])}
                 customClassName="experience-card-3"

@@ -148,6 +148,7 @@
     /* Semantic tokens */
     --page-background: var(--dark-purple);
     --main-text-color: var(--white);
+    --main-text-color-hover: var(--intense-green);
     --green-text-color: var(--intense-green);
     --purple-text-color: var(--dark-purple);
     --techused-background: var(--intense-green);
