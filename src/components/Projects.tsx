@@ -36,7 +36,7 @@ function Projects() {
 
                     <ProjectCard
                         title="Naliia website"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsam voluptatibus aspernatur itaque ea voluptas aperiam ex totam sunt suscipit aut veniam excepturi aliquam corporis rerum nobis dolor, autem voluptatum consectetur delectus, amet fugit accusantium aliquid enim."
+                        description="A content-focused website using Astro and some scroll-triggered animations with the purpose of providing information about Naliia and its services to people."
                         projectLink="#"
                         techsUsed={orderTechsByLength([
                             "Astro",
