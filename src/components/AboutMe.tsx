@@ -1,12 +1,11 @@
 import "../styles/aboutme.css";
-import TestComponent from "./TestComponent";
-import "../styles/test-component.css";
+import MyImageComponent from "./MyImageComponent";
 
 function AboutMe() {
     return (
         <div className="about-me-container">
             <div className="img-container">
-                <TestComponent />
+                <MyImageComponent />
             </div>
 
             <div className="text-information">

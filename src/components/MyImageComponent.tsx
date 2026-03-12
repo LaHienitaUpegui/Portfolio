@@ -1,12 +1,12 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import gsap from "gsap";
-import "../styles/test-component.css";
+import { useGSAP } from "@gsap/react";
+import "../styles/my-image-component.css";
 
-function TestComponent() {
+function MyImageComponent() {
+    const containerRef = useRef(null);
     const headRef = useRef(null);
     const emojiRef = useRef(null);
-    const containerRef = useRef(null);
-    const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
     const emojiPaths = [
         "/imgs/x_full.png",
@@ -15,16 +15,21 @@ function TestComponent() {
         "/imgs/pillow_full.png",
         "/imgs/cora_full.png",
     ];
-
-    useEffect(() => {
-        gsap.set([headRef.current, emojiRef.current], {
-            transformOrigin: "50% 18%",
-        });
-    }, []);
     const [currentEmoji, setCurrentEmoji] = useState(emojiPaths[0]);
     const [lastIndex, setLastIndex] = useState<number | null>(null);
 
-    function handleMouseEnter() {
+    useGSAP(
+        () => {
+            gsap.set([headRef.current, emojiRef.current], {
+                transformOrigin: "50% 18%",
+            });
+        },
+        { scope: containerRef },
+    );
+
+    const { contextSafe } = useGSAP({ scope: containerRef });
+
+    const handleMouseEnter = contextSafe(() => {
         gsap.killTweensOf([headRef.current, emojiRef.current]);
 
         let nextIndex;
@@ -35,9 +40,9 @@ function TestComponent() {
         setLastIndex(nextIndex);
         setCurrentEmoji(emojiPaths[nextIndex]);
 
-        timelineRef.current = gsap.timeline();
+        const timeline = gsap.timeline();
 
-        timelineRef.current
+        timeline
             .to(headRef.current, {
                 scale: 0,
                 opacity: 0,
@@ -50,14 +55,14 @@ function TestComponent() {
                 { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" },
                 "-=0.1",
             );
-    }
+    });
 
-    function handleMouseLeave() {
+    const handleMouseLeave = contextSafe(() => {
         gsap.killTweensOf([headRef.current, emojiRef.current]);
 
-        timelineRef.current = gsap.timeline();
+        const timeline = gsap.timeline();
 
-        timelineRef.current
+        timeline
             .to(emojiRef.current, {
                 scale: 0,
                 opacity: 0,
@@ -74,7 +79,7 @@ function TestComponent() {
                 },
                 "-=0.1",
             );
-    }
+    });
 
     return (
         <div
@@ -101,4 +106,4 @@ function TestComponent() {
     );
 }
 
-export default TestComponent;
+export default MyImageComponent;
