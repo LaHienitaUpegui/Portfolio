@@ -1,11 +1,18 @@
 import "../styles/projects.css";
+import { projects } from "../data/projects";
+import type { Project } from "../data/projects";
 import ProjectCard from "./ProjectCard";
-
-function orderTechsByLength(techsArray: string[]) {
-    return techsArray.sort((a, b) => b.length - a.length);
-}
+import { orderTechsByLength } from "../utils";
 
 function Projects() {
+    const naliiaProjects: Project[] = projects.filter(
+        (project) => project.category === "naliia",
+    );
+
+    const personalProjects: Project[] = projects.filter(
+        (project) => project.category === "personal",
+    );
+
     return (
         <div className="projects-container">
             <div className="naliia-projects">
@@ -21,33 +28,16 @@ function Projects() {
                 </div>
 
                 <div className="project-cards-container">
-                    <ProjectCard
-                        backgroundImg="/imgs/naliia_webapp.webp"
-                        title="Naliia web application"
-                        description="A web app that users can use to interact via RPC directly with the Naliia Tryton ERP system, allowing them to perform different tasks such as checking and creating new services in the database and creat ing reports of services successfully taken in a certain period of time."
-                        projectLink="/naliia-project"
-                        techsUsed={orderTechsByLength([
-                            "VITE",
-                            "React",
-                            "TypeScript",
-                            "Tailwind CSS",
-                            "RPC Protocol",
-                        ])}
-                    />
-
-                    <ProjectCard
-                        backgroundImg="/imgs/naliia_website.webp"
-                        title="Naliia website"
-                        description="A content-focused website using Astro and some scroll-triggered animations with the purpose of providing information about Naliia and its services to people."
-                        projectLink="#"
-                        techsUsed={orderTechsByLength([
-                            "Astro",
-                            "HTML5",
-                            "CSS3",
-                            "JavaScript ES6+",
-                            "GSAP",
-                        ])}
-                    />
+                    {naliiaProjects.map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            id={project.id}
+                            backgroundImg={project.backgroundImg}
+                            title={project.title}
+                            description={project.description}
+                            techsUsed={orderTechsByLength(project.techsUsed)}
+                        />
+                    ))}
                 </div>
             </div>
 
@@ -58,15 +48,16 @@ function Projects() {
                 </div>
 
                 <div className="project-cards-container">
-                    <ProjectCard
-                        title="Project #3"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsam voluptatibus aspernatur itaque ea voluptas aperiam ex totam sunt suscipit aut veniam excepturi aliquam corporis rerum nobis dolor, autem voluptatum consectetur delectus, amet fugit accusantium aliquid enim."
-                        techsUsed={orderTechsByLength([
-                            "Tech 1",
-                            "Tech 2",
-                            "Tech 3",
-                        ])}
-                    />
+                    {personalProjects.map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            id={project.id}
+                            backgroundImg={project.backgroundImg}
+                            title={project.title}
+                            description={project.description}
+                            techsUsed={orderTechsByLength(project.techsUsed)}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
