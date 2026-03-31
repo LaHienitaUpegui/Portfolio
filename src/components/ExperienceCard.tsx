@@ -1,15 +1,17 @@
 import "../styles/experiencecard.css";
 
 interface ExperienceCardProps {
+    id: string;
     title: string;
     charge: string;
+    timePeriod: string;
     description: string;
     techsUsed: string[];
     customClassName?: string;
-    timePeriod?: string;
 }
 
 function ExperienceCard({
+    id,
     title,
     charge,
     description,
@@ -18,7 +20,7 @@ function ExperienceCard({
     timePeriod = "",
 }: ExperienceCardProps) {
     return (
-        <div className={`experience-card-container ${customClassName}`}>
+        <div className={`experience-card-container ${customClassName}`} id={id}>
             <div className="title-and-charge">
                 <h6 className="title">{title}</h6>
 
