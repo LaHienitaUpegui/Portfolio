@@ -1,6 +1,6 @@
 import "../styles/projects.css";
-import { projects } from "../data/projects";
-import type { Project } from "../data/projects";
+import { projects } from "../content/projects";
+import type { Project } from "../content/projects";
 import ProjectCard from "./ProjectCard";
 import { orderTechsByLength } from "../utils";
 
@@ -44,7 +44,11 @@ function Projects() {
             <div className="personal-projects">
                 <div className="title-and-description">
                     <h4 className="project-title">Personal projects</h4>
-                    <p className="project-description">Hola</p>
+                    <p className="project-description">
+                        Some personal projects I've worked on finding software
+                        solutions to various problems focusing in the frontend
+                        development and user experience.
+                    </p>
                 </div>
 
                 <div className="project-cards-container">
