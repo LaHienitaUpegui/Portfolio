@@ -1,10 +1,15 @@
 {
-  "version": 1,
-  "skills": {
-    "responsive-design": {
-      "source": "wshobson/agents",
-      "sourceType": "github",
-      "computedHash": "1c756f7e216c16c91be788a0f64ae5d94451b5ffe076a1e120f671e2a3c9bd3e"
+    "version": 1,
+    "skills": {
+        "create-readme": {
+            "source": "github/awesome-copilot",
+            "sourceType": "github",
+            "computedHash": "d0ece1b2164ce1376e4ab6e98d6ac079df3a2a94f5f02224362b6a1ce2516ae9"
+        },
+        "responsive-design": {
+            "source": "wshobson/agents",
+            "sourceType": "github",
+            "computedHash": "1c756f7e216c16c91be788a0f64ae5d94451b5ffe076a1e120f671e2a3c9bd3e"
+        }
     }
-  }
 }
