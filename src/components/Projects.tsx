@@ -14,11 +14,11 @@ function Projects() {
     );
 
     return (
-        <div className="projects-container">
-            <div className="naliia-projects">
-                <div className="title-and-description">
-                    <h4 className="project-title">Naliia projects</h4>
-                    <p className="project-description">
+        <div className="projects__container">
+            <div className="projects__naliia">
+                <div className="projects__title-and-desc">
+                    <h4>Naliia projects</h4>
+                    <p>
                         Naliia, an ERP business management solution that
                         combines two systems: a Tryton system and a custom-built
                         web application. As a front-end developer, I
@@ -41,10 +41,10 @@ function Projects() {
                 </div>
             </div>
 
-            <div className="personal-projects">
-                <div className="title-and-description">
-                    <h4 className="project-title">Personal projects</h4>
-                    <p className="project-description">
+            <div className="projects__personal">
+                <div className="projects__title-and-desc">
+                    <h4>Personal projects</h4>
+                    <p>
                         Some personal projects I've worked on finding software
                         solutions to various problems focusing in the frontend
                         development and user experience.
@@ -63,6 +63,41 @@ function Projects() {
                         />
                     ))}
                 </div>
+            </div>
+
+            <div className="projects__graphic-design">
+                <div className="projects__title-and-desc">
+                    <h4>Graphic Design projects</h4>
+                    <p>
+                        Some graphic design projects I've worked on focusing on
+                        creating visual identities and branding for different
+                        types of businesses and projects.
+                    </p>
+                </div>
+
+                <a
+                    href="https://www.behance.net/juan427748799"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="projects__graphic-design-link"
+                >
+                    View my graphic design projects on Behance
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="var(--icons-fill-white)"
+                            d="M7.354 11.107V9.502c0-.095 0-.133.124-.133c1.063 0 1.927-.063 2.356.19c.43.252.448.6.455.704s.004.253-.196.616s-1.095.37-1.741.37h-.855c-.105 0-.143-.038-.143-.142m2.946 1.682a1.12 1.12 0 0 1-.324 1.662a1.7 1.7 0 0 1-.646.133H7.487c-.095 0-.133 0-.133-.123v-1.9c0-.095 0-.133.124-.133h1.225c.76 0 1.235-.067 1.597.36"
+                        />
+                        <path
+                            fill="var(--icons-fill-white)"
+                            d="M16.989 11.909a.87.87 0 0 0-.566-.498a1.84 1.84 0 0 0-1.492.235a1.43 1.43 0 0 0-.4.809c0 .107 0 .127.127.127h2.37c.117 0 .117 0 .107-.147a1.3 1.3 0 0 0-.147-.526m0 0a.87.87 0 0 0-.566-.498a1.84 1.84 0 0 0-1.492.235a1.43 1.43 0 0 0-.4.809c0 .107 0 .127.127.127h2.37c.117 0 .117 0 .107-.147a1.3 1.3 0 0 0-.147-.526M18.1 2.5H6.4a3.9 3.9 0 0 0-3.9 3.9v11.7A3.9 3.9 0 0 0 6.4 22h11.7a3.9 3.9 0 0 0 3.9-3.9V6.4a3.9 3.9 0 0 0-3.9-3.9m-3.822 6.21c0-.077 0-.107.088-.107h3.159v.82s.003.058-.049.058h-3.061c-.137 0-.137 0-.137-.136zm-2.925 7.167c-1.2.653-3.217.39-5.606.39V8.184h3.812c.975 0 2.135.244 2.447 1.277a1.95 1.95 0 0 1-.975 2.409a2.213 2.213 0 0 1 .312 4.007zm7.264-2.301h-3.9c-.107 0-.205.058-.186.195c.117.575.38 1.18.976 1.268a1.47 1.47 0 0 0 1.686-.663s.049-.059.078-.059h1.268s.078 0 .058.068a3.5 3.5 0 0 1-.585 1.043a3.05 3.05 0 0 1-4.787-.75a2.5 2.5 0 0 1-.253-.878a3.023 3.023 0 0 1 2.203-3.597c2.213-.478 3.617 1.043 3.617 3.188a.165.165 0 0 1-.185.185zm-2.184-2.165a1.8 1.8 0 0 0-.771-.042c-.257.04-.487.089-.721.277c-.234.187-.358.503-.4.809c0 .107 0 .127.127.127h2.36c.117 0 .117 0 .107-.147a1.3 1.3 0 0 0-.147-.526a.87.87 0 0 0-.565-.498z"
+                        />
+                    </svg>
+                </a>
             </div>
         </div>
     );
