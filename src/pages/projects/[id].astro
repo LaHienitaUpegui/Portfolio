@@ -42,8 +42,8 @@ const { project } = Astro.props;
                             Try it out for yourself
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="32"
+                                width="24"
+                                height="24"
                                 viewBox="0 0 24 24"
                             >
                                 <path
@@ -69,8 +69,8 @@ const { project } = Astro.props;
                             View the code on GitHub
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="28"
+                                width="24"
+                                height="24"
                                 viewBox="0 0 24 24"
                                 class="github-icon"
                             >
@@ -89,6 +89,15 @@ const { project } = Astro.props;
             <div class="project__carousel">
                 <Carousel project={project} client:load />
             </div>
+        </div>
+
+        <div class="project__additional-comments">
+            {
+                project.additionalComments &&
+                    project.additionalComments.map((comment) => (
+                        <p class="project__additional-comment">{comment}</p>
+                    ))
+            }
         </div>
 
         <div class="project__techs">

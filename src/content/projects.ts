@@ -10,6 +10,7 @@ export interface Project {
     projectImages: string[];
     projectLink?: string;
     githubLink?: string;
+    additionalComments?: string[];
 }
 
 export const projects: Project[] = [
@@ -56,17 +57,22 @@ export const projects: Project[] = [
     {
         id: "Taskifier",
         category: "personal",
-        backgroundImg: "/imgs/taskifier.webp",
+        backgroundImg: "/imgs/taskifier_banner.webp",
         title: "Taskifier",
         description:
             "A task management web application that allows users to create, organize, and track their tasks and projects. It provides features such as task categorization, due dates, priority levels, and progress tracking to help users stay organized and productive.",
         techsUsed: ["VITE", "React", "TypeScript", "CSS3", "Figma"],
         projectImages: [
-            "/imgs/taskifier/Rectangle 3.jpg",
-            "/imgs/taskifier/Rectangle 4.jpg",
-            "/imgs/taskifier/Rectangle 5.jpg",
-            "/imgs/taskifier/Rectangle 6.jpg",
-            "/imgs/taskifier/Rectangle 7.jpg",
+            "/imgs/projects/personal/taskifier/1.webp",
+            "/imgs/projects/personal/taskifier/2.webp",
+            "/imgs/projects/personal/taskifier/3.webp",
+            "/imgs/projects/personal/taskifier/4.webp",
+            "/imgs/projects/personal/taskifier/5.webp",
+        ],
+        projectLink: "https://taskifier-psi.vercel.app/",
+        githubLink: "https://github.com/LaHienitaUpegui/Taskifier",
+        additionalComments: [
+            "This is a WIP project that uses local storage as the main way of storing projects and tasks. I plan to continue with its development adding new features.",
         ],
     },
 ];
