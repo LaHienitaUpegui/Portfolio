@@ -1,17 +1,17 @@
-.projects-container {
+.projects__container {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--gap-64px);
 }
 
-.naliia-projects {
+.projects__naliia {
     display: flex;
     flex-direction: column;
     gap: var(--gap-24px);
 }
 
-.personal-projects {
+.projects__personal {
     display: flex;
     flex-direction: column;
     gap: var(--gap-24px);
@@ -22,7 +22,39 @@
     gap: var(--gap-32px);
 }
 
-.title-and-description {
+.projects__graphic-design {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-24px);
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-8px);
+
+        color: var(--main-text-color);
+        text-decoration: underline;
+        font-weight: bold;
+        transition: color 0.2s;
+
+        svg,
+        path {
+            fill: var(--icons-fill-white);
+            transition: fill 0.2s;
+        }
+
+        &:hover {
+            color: var(--green-text-color);
+
+            svg,
+            path {
+                fill: var(--icons-fill-green);
+            }
+        }
+    }
+}
+
+.projects__title-and-desc {
     display: flex;
     flex-direction: column;
     gap: var(--gap-8px);
