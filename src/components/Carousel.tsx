@@ -17,6 +17,7 @@ function Carousel({ project }: CarouselProps) {
             slidesPerView={1}
             pagination={{ clickable: true }}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
+            className="carousel-swiper"
         >
             {project.projectImages.map((image) => (
                 <SwiperSlide>
@@ -29,6 +30,7 @@ function Carousel({ project }: CarouselProps) {
                             objectFit: "cover",
                             borderRadius: "var(--radius-16px)",
                         }}
+                        className="carousel-image"
                     />
                 </SwiperSlide>
             ))}
