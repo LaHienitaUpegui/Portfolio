@@ -27,9 +27,10 @@ import Layout from "../layouts/Layout.astro";
                     height="100%"></rect>
             </svg>
 
-            <button transition:name="counter-button" class="visual-button"
-                >Click me! Don't be shy! I don't bite!</button
-            >
+            <button transition:name="counter-button" class="visual-button">
+                <span class="button-text-full">Click me! Don't be shy! I don't bite!</span>
+                <span class="button-text-short">Click me, I don't bite</span>
+            </button>
 
             <div class="clickme-container clickme-bottom">
                 <svg
@@ -336,5 +337,65 @@ import Layout from "../layouts/Layout.astro";
         fill: var(--white);
         width: 50px;
         height: 50px;
+    }
+
+    /* Mobile - max-width: 767px */
+    @media (max-width: 767px) {
+        .text-and-initial-button {
+            width: 100%;
+            padding: 0 var(--padding-16px);
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: var(--gap-24px);
+        }
+
+        .text-and-initial-button .initial-phrase {
+            font-size: var(--fs-mobile-p-16px);
+            width: 100%;
+        }
+
+        .text-and-initial-button .button-container {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .text-and-initial-button .visual-button {
+            font-size: var(--fs-mobile-p-16px);
+            width: 100%;
+            padding: var(--padding-12px) var(--padding-16px);
+            min-height: 60px;
+            white-space: normal;
+            text-align: center;
+            line-height: 1.3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-text-short {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .button-text-full {
+                display: none;
+            }
+
+            .button-text-short {
+                display: inline;
+            }
+        }
+
+        .clickme-bottom,
+        .clickme-left,
+        .clickme-right {
+            display: none;
+        }
     }
 </style>
