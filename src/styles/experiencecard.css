@@ -73,3 +73,20 @@
     border: none;
     border-radius: var(--radius-9999px);
 }
+
+/* Mobile - max-width: 767px */
+@media (max-width: 767px) {
+    .experience-card-container {
+        padding: var(--padding-16px);
+    }
+
+    .charge-and-time-period {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--gap-4px);
+    }
+
+    .charge-and-time-period .time-period {
+        font-size: var(--fs-mobile-sm-12px);
+    }
+}
