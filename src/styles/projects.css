@@ -69,3 +69,19 @@
         color: var(--main-text-color);
     }
 }
+
+/* Mobile - max-width: 767px */
+@media (max-width: 767px) {
+    .projects__container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .project-cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-16px);
+        width: 100%;
+        overflow-x: hidden;
+    }
+}

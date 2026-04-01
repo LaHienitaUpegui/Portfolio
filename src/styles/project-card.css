@@ -94,3 +94,53 @@
         border-radius: var(--radius-9999px);
     }
 }
+
+/* Mobile - max-width: 767px */
+@media (max-width: 767px) {
+    .project-card {
+        width: 100%;
+        padding: var(--padding-16px);
+        gap: var(--gap-16px);
+        overflow-x: hidden;
+    }
+
+    .image-mockup {
+        height: 140px;
+    }
+
+    .project-info {
+        gap: var(--gap-16px);
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .title-and-info {
+        gap: var(--gap-4px);
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .project-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .view-project-link {
+        overflow-x: hidden;
+    }
+
+    .techs-used {
+        flex-wrap: wrap;
+        gap: var(--gap-8px);
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .techs-used .tech {
+        font-size: var(--fs-mobile-sm-12px);
+        padding: var(--padding-4px) var(--padding-16px);
+    }
+}

@@ -33,3 +33,19 @@
         color: var(--main-text-color);
     }
 }
+
+/* Mobile - max-width: 767px */
+@media (max-width: 767px) {
+    .about-me-container {
+        flex-direction: column;
+        gap: var(--gap-24px);
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .text-information {
+        gap: var(--gap-16px);
+    }
+}
