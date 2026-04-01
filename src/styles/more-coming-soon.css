@@ -26,3 +26,21 @@
     font-weight: bold;
     color: var(--green-text-color);
 }
+
+/* Mobile - max-width: 767px */
+@media (max-width: 767px) {
+    .more-coming-soon-container {
+        flex-direction: column;
+        gap: var(--gap-16px);
+        text-align: center;
+    }
+
+    .gif-man-saying-no {
+        height: 200px;
+    }
+
+    .more-coming-soon-text {
+        align-items: center;
+        gap: var(--gap-4px);
+    }
+}
