@@ -14,6 +14,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    // Naliia projects
     {
         id: "naliia-webapp",
         category: "naliia",
@@ -29,11 +30,12 @@ export const projects: Project[] = [
             "RPC Protocol",
         ],
         projectImages: [
-            "/src/assets/images/naliia/Rectangle 3.jpg",
-            "/src/assets/images/naliia/Rectangle 4.jpg",
-            "/src/assets/images/naliia/Rectangle 5.jpg",
-            "/src/assets/images/naliia/Rectangle 6.jpg",
-            "/src/assets/images/naliia/Rectangle 7.jpg",
+            "/imgs/projects/naliia/webapp/1.webp",
+            "/imgs/projects/naliia/webapp/2.webp",
+            "/imgs/projects/naliia/webapp/3.webp",
+            "/imgs/projects/naliia/webapp/4.webp",
+            "/imgs/projects/naliia/webapp/5.webp",
+            "/imgs/projects/naliia/webapp/6.webp",
         ],
     },
 
@@ -46,14 +48,15 @@ export const projects: Project[] = [
             "A content-focused website using Astro and some scroll-triggered animations with the purpose of providing information about Naliia and its services to people.",
         techsUsed: ["Astro", "HTML5", "CSS3", "JavaScript ES6+", "GSAP"],
         projectImages: [
-            "/imgs/naliia/Rectangle 3.jpg",
-            "/imgs/naliia/Rectangle 4.jpg",
-            "/imgs/naliia/Rectangle 5.jpg",
-            "/imgs/naliia/Rectangle 6.jpg",
-            "/imgs/naliia/Rectangle 7.jpg",
+            "/imgs/projects/naliia/website/1.webp",
+            "/imgs/projects/naliia/website/2.webp",
+            "/imgs/projects/naliia/website/3.webp",
+            "/imgs/projects/naliia/website/4.webp",
+            "/imgs/projects/naliia/website/5.webp",
         ],
     },
 
+    // Personal projects
     {
         id: "Taskifier",
         category: "personal",

@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -26,7 +26,7 @@ function Carousel({ project }: CarouselProps) {
                         style={{
                             width: "100%",
                             height: "auto",
-                            objectFit: "contain",
+                            objectFit: "cover",
                             borderRadius: "var(--radius-16px)",
                         }}
                     />

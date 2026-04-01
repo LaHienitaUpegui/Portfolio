@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "../styles/my-image-component.css";
@@ -7,16 +7,6 @@ function MyImageComponent() {
     const containerRef = useRef(null);
     const headRef = useRef(null);
     const emojiRef = useRef(null);
-
-    const emojiPaths = [
-        "/imgs/x_full.png",
-        "/imgs/troll_face_full.png",
-        "/imgs/shit_full.png",
-        "/imgs/pillow_full.png",
-        "/imgs/cora_full.png",
-    ];
-    const [currentEmoji, setCurrentEmoji] = useState(emojiPaths[0]);
-    const [lastIndex, setLastIndex] = useState<number | null>(null);
 
     useGSAP(
         () => {
@@ -31,14 +21,6 @@ function MyImageComponent() {
 
     const handleMouseEnter = contextSafe(() => {
         gsap.killTweensOf([headRef.current, emojiRef.current]);
-
-        let nextIndex;
-        do {
-            nextIndex = Math.floor(Math.random() * emojiPaths.length);
-        } while (nextIndex === lastIndex);
-
-        setLastIndex(nextIndex);
-        setCurrentEmoji(emojiPaths[nextIndex]);
 
         const timeline = gsap.timeline();
 
@@ -97,7 +79,7 @@ function MyImageComponent() {
                 ref={headRef}
             />
             <img
-                src={currentEmoji}
+                src="/imgs/troll_face_full.png"
                 alt="Emoji"
                 className="emoji"
                 ref={emojiRef}
