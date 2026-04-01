@@ -19,30 +19,62 @@ function MainContentComponent() {
         "more-coming-soon-container",
     ];
 
+    const activeContainer = contentComponentsContainers[counter - 1];
+
     function renderContent() {
         switch (counter) {
             case 1:
-                return <AboutMe />;
+                return (
+                    <div className="about-me-container">
+                        <AboutMe />
+                    </div>
+                );
             case 2:
-                return <MyExperience />;
+                return (
+                    <div className="experience-container">
+                        <MyExperience />
+                    </div>
+                );
             case 3:
-                return <Projects />;
+                return (
+                    <div className="projects-container">
+                        <Projects />
+                    </div>
+                );
             case 4:
-                return <MoreComingSoon />;
+                return (
+                    <div className="more-coming-soon-container">
+                        <MoreComingSoon />
+                    </div>
+                );
             default:
-                return <AboutMe />;
+                return (
+                    <div className="about-me-container">
+                        <AboutMe />
+                    </div>
+                );
         }
     }
 
     useGSAP(
         () => {
-            contentComponentsContainers.forEach((container) => {
-                gsap.from(`.${container}`, {
-                    opacity: 0,
-                    x: -100,
-                    duration: 1,
-                    ease: "power2.out",
-                });
+            const containers = document.querySelectorAll(
+                ".about-me-container, .experience-container, .projects-container, .more-coming-soon-container",
+            );
+
+            containers.forEach((container) => {
+                const isVisible = container.classList.contains(activeContainer);
+
+                gsap.fromTo(
+                    container,
+                    { opacity: isVisible ? 0 : 1, x: isVisible ? -100 : 0 },
+                    {
+                        opacity: 1,
+                        x: 0,
+                        duration: 0.5,
+                        ease: "power2.out",
+                    },
+                );
             });
 
             gsap.to(".active", {
