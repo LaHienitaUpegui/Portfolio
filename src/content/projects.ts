@@ -54,6 +54,7 @@ export const projects: Project[] = [
             "/imgs/projects/naliia/website/4.webp",
             "/imgs/projects/naliia/website/5.webp",
         ],
+        projectLink: "https://www.naliia.co/",
     },
 
     // Personal projects
